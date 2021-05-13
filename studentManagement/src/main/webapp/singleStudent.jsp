@@ -23,7 +23,7 @@
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
-        <caption><h2>Single student</h2></caption>
+        <caption><h2>View single student</h2></caption>
         <tr>
             <th>ID</th>
             <th>First Name</th>
