@@ -18,7 +18,7 @@
     </welcome-file-list>
     <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql://localhost:3306/school_man_db?characterEncoding=utf8</param-value>
+        <param-value>jdbc:mysql://localhost:3306/web_crud_java?characterEncoding=utf8</param-value>
     </context-param>
     <context-param>
         <param-name>jdbcUsername</param-name>
@@ -26,7 +26,7 @@
     </context-param>
     <context-param>
         <param-name>jdbcPassword</param-name>
-        <param-value>Mutoni@2020</param-value>
+        <param-value>welcome</param-value>
     </context-param>
     <!--    <servlet>-->
     <!--        <servlet-name>Students</servlet-name>-->

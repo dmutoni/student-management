@@ -48,6 +48,9 @@ public class Students extends HttpServlet {
                 case "/update":
                     updateStudent(request, response);
                     break;
+                case "/viewSingle":
+                    showSingleStudent(request, response);
+                    break;
                 case "/list" :
                     listStudent(request, response);
                 default:
@@ -63,6 +66,14 @@ public class Students extends HttpServlet {
         List<Student> listStudent = studentDao.listAllStudents();
         request.setAttribute("listStudent", listStudent);
         RequestDispatcher dispatcher = request.getRequestDispatcher("students.jsp");
+        dispatcher.forward(request, response);
+    }
+    private void showSingleStudent(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Student foundStudent = studentDao.getStudent(id);
+        request.setAttribute("foundStudent", foundStudent);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("singleStudent.jsp");
         dispatcher.forward(request, response);
     }
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)

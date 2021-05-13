@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
@@ -31,19 +31,17 @@
             <th>Gender</th>
             <th></th>
         </tr>
-        <c:forEach var="student" items="${listStudent}">
-            <tr>
-                <td><c:out value="${student.id}" /></td>
-                <td><c:out value="${student.firstName}" /></td>
-                <td><c:out value="${student.lastName}" /></td>
-                <td><c:out value="${student.gender}" /></td>
-                <td>
-                    <a href="/studentManagement_war_exploded/edit?id=<c:out value='${student.id}' />">Edit</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/studentManagement_war_exploded/delete?id=<c:out value='${student.id}' />">Delete</a>
-                </td>
-            </tr>
-        </c:forEach>
+        <tr>
+            <td><c:out value="${foundStudent.id}"/></td>
+            <td><c:out value="${foundStudent.firstName}"/></td>
+            <td><c:out value="${foundStudent.lastName}"/></td>
+            <td><c:out value="${foundStudent.gender}"/></td>
+            <td>
+                <a href="/studentManagement_war_exploded/edit?id=<c:out value='${foundStudent.id}' />">Edit</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/studentManagement_war_exploded/delete?id=<c:out value='${foundStudent.id}' />">Delete</a>
+            </td>
+        </tr>
     </table>
 </div>
 </body>
