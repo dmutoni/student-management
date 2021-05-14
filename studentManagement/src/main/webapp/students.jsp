@@ -38,6 +38,8 @@
                 <td><c:out value="${student.lastName}" /></td>
                 <td><c:out value="${student.gender}" /></td>
                 <td>
+                    <a href="/studentManagement_war_exploded/viewSingle?id=<c:out value='${student.id}' />">View profile</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/studentManagement_war_exploded/edit?id=<c:out value='${student.id}' />">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/studentManagement_war_exploded/delete?id=<c:out value='${student.id}' />">Delete</a>
